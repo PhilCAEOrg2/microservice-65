@@ -86,11 +86,11 @@ public class ResTest {
 
   /**
    * 
-   * Second Test for the FirstCase method.
+   * Second Test for the Secondtestcase method.
    * 
    */
   @Test
-  public void testFirstCase2() {
+  public void testSecondtestcase2() {
     MiniClient c = new MiniClient();
     c.setAddressPort(HTTP_ADDRESS, HTTP_PORT);
     
@@ -98,11 +98,11 @@ public class ResTest {
     try {
       ClientResponse result = c.sendRequest("GET", mainPath + "/one", "");
           
-      Assert.assertTrue("Status code equals 409 [897557]", result.getHttpCode() == 409);
-      
       Assert.assertTrue("Status code equals 200 [884879]", result.getHttpCode() == 200);
+      
+      Assert.assertTrue("Status code equals 409 [897557]", result.getHttpCode() == 409);
 
-      System.out.println("Result of 'test$HTTP_Method_Name$': " + result.getResponse().trim());
+      System.out.println("Result of 'testSecondtestcase': " + result.getResponse().trim());
     } catch (Exception e) {
       e.printStackTrace();
       fail("Exception: " + e);
@@ -114,7 +114,47 @@ public class ResTest {
           
       Assert.assertTrue("Status code equals 200 [200674]", result.getHttpCode() == 200);
 
-      System.out.println("Result of 'test$HTTP_Method_Name$': " + result.getResponse().trim());
+      System.out.println("Result of 'testSecondtestcase': " + result.getResponse().trim());
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Exception: " + e);
+    }
+    
+
+    
+  }
+  
+  /**
+   * 
+   * Second Test for the Secondtestcase method.
+   * 
+   */
+  @Test
+  public void testSecondtestcase2() {
+    MiniClient c = new MiniClient();
+    c.setAddressPort(HTTP_ADDRESS, HTTP_PORT);
+    
+        
+    try {
+      ClientResponse result = c.sendRequest("GET", mainPath + "/one", "");
+          
+      Assert.assertTrue("Status code equals 200 [884879]", result.getHttpCode() == 200);
+      
+      Assert.assertTrue("Status code equals 409 [897557]", result.getHttpCode() == 409);
+
+      System.out.println("Result of 'testSecondtestcase': " + result.getResponse().trim());
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Exception: " + e);
+    }
+    
+    
+    try {
+      ClientResponse result = c.sendRequest("GET", mainPath + "/two", "");
+          
+      Assert.assertTrue("Status code equals 200 [200674]", result.getHttpCode() == 200);
+
+      System.out.println("Result of 'testSecondtestcase': " + result.getResponse().trim());
     } catch (Exception e) {
       e.printStackTrace();
       fail("Exception: " + e);
